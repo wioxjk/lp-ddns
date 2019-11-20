@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
+. /etc/lp-dyndns/settings.conf
 
-RECORDID="28378"
-PASSWORD="pass123"
-DOMAIN="test.jonathanselea.se"
-
+#RECORDID="28378"
+#PASSWORD="pass123"
+#DOMAIN="test.jonathanselea.se"
 
 
 # DO NOT MODIFY #
@@ -27,14 +27,11 @@ echo -e "The current external IP is ${YELLOW}${IP}${NC}"
 
 if [ "${IP}" == "${CURRENTIP}" ];
 then
-	echo -e "${GREEN}The current IP matches the record, no need to update.${NC}"
+	echo -e "${GREEN}The current IP matches the record ${DOMAIN}, no need to update.${NC}"
 else
 	echo -e "${RED}Current IP does not match the record ${CURRENTIP} updating...${NC}"
 	curl ${APIURL}
 fi
-
-logger 
-sleep 300
 
 
 exit 0
