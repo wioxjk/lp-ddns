@@ -1,0 +1,16 @@
+workspace:
+  path: /
+
+pipeline:
+  master:
+    when:
+       branch: master
+    ssh:
+    image: appleboy/drone-ssh
+        host: web.linux.pizza
+    username: root
+    port: 22
+    secrets: [ ssh_key ]
+    script:
+       - cd /home/web
+
