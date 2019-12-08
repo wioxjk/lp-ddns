@@ -1,0 +1,9 @@
+Package: lp-ddns
+Version: 0.1a
+Section: custom
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 16
+Maintainer: Jonathan Sélea
+Description: Tool for managing Dynamic DNS toghether with FreeDNS.linux.pizza
