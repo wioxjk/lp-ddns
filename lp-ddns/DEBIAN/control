@@ -6,4 +6,5 @@ Architecture: all
 Essential: no
 Installed-Size: 16
 Maintainer: Jonathan Sélea
+Depends-On: curl
 Description: Tool for managing Dynamic DNS toghether with FreeDNS.linux.pizza
