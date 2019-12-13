@@ -1,1 +1,2 @@
 /etc/lp-dyndns/settings.conf
+/etc/cron.d/lp-ddns
