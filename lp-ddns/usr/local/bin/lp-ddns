@@ -1,14 +1,6 @@
 #!/bin/bash
 set -e
-
 . /etc/lp-dyndns/settings.conf
-
-#RECORDID="11111"
-#PASSWORD="passss"
-#DOMAIN="sub.domain.tld"
-
-
-# DO NOT MODIFY #
 IP="$(curl --connect-timeout 10 -s ipv4.is || curl --connect-timeout 10 -s ipv4.is)"
 #IP="$(curl --config /etc/lp-dyndns/curlrc)"
 CURRENTIP="$(dig ${DOMAIN} +short)"
@@ -22,10 +14,7 @@ CYAN='\033[0;36m'
 LCYAN='\033[0;37m'
 YELLOW='\033[1;33m'
 # END
-
-
 echo -e "The current external IP is ${YELLOW}${IP}${NC}" 
-
 if [ "${IP}" == "${CURRENTIP}" ];
 then
 	echo -e "${GREEN}The current IP matches the record ${DOMAIN}, no need to update.${NC}"
@@ -33,6 +22,4 @@ else
 	echo -e "${RED}Current IP does not match the record ${CURRENTIP} updating...${NC}" 
 	curl ${APIURL}
 fi
-
-
 exit 0
