@@ -3,8 +3,8 @@ Section: custom
 Priority: optional
 Maintainer: Jonathan Sélea <jonathan@selea.se>
 Package: lp-ddns
-Version: 0.1c
-Standard-Version: 0.1c
+Version: 0.2a
+Standard-Version: 0.2a
 Architecture: all
 Essential: no
 Depends-On: curl

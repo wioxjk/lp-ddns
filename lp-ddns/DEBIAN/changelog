@@ -1,5 +1,5 @@
-PACKAGE (0.1a) UNRELEASED; urgency=medium
+PACKAGE (0.2) UNRELEASED; urgency=medium
 
-  * 0.1a First working commit,
+  * 0.2 Make output prettier when executing "lp-ddns"
 
- -- Jonathan Sélea <jonathan@selea.se>  Sun, 08 Dec 2019 16:02:15 +0100
+ -- Jonathan Sélea <jonathan@selea.se>  Sun, 4 Jan 2020 22:48:15 +0100
