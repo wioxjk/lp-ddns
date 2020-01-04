@@ -1,0 +1,4 @@
+# bzr-builder format 0.2 deb-version {debupstream}-0~{revno}
+lp:lp-ddns
+nest packaging lp:~jonathan-selea/lp-ddns/lp-ddns debian
+
