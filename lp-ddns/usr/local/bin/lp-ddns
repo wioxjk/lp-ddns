@@ -1,6 +1,17 @@
 #!/bin/bash
 set -e
+
+# Comment this if you want to use this script standalone:
 . /etc/lp-dyndns/settings.conf
+
+# Uncomment if you want to use this script standalone:
+#RECORDID=
+#PASSWORD=
+#DOMAIN=
+
+
+# Do not touch this, unless you want to touch this :)
+
 IP="$(curl --connect-timeout 10 -s ipv4.is || curl --connect-timeout 10 -s ipv4.is)"
 #IP="$(curl --config /etc/lp-dyndns/curlrc)"
 CURRENTIP="$(dig ${DOMAIN} +short)"
