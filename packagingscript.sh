@@ -5,7 +5,7 @@
 pkgname=lp-ddns
 
 repo="wioxjk/lp-ddns"
-current=$(reprepro -b /srv/repos/ list stable bashtop | head -n1 | awk '{print $3}')
+current=$(reprepro -b /srv/repos/ list stable lp-ddns | head -n1 | awk '{print $3}')
 
 if [[ ! -d /tmp/${pkgname} ]]; then
     git clone https://github.com/$repo /tmp/lp-ddns
@@ -23,7 +23,7 @@ if [ "$current" == "$new" ]; then
     exit
 fi
 
-echo "New BASHTOP version $current -> $new"
+echo "New LP-DDNS version $current -> $new"
 
 STARTDIR="/tmp/${pkgname}/build"
 DESTDIR="$STARTDIR/pkg"
