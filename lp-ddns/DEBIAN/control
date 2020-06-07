@@ -3,11 +3,11 @@ Section: custom
 Priority: optional
 Maintainer: Jonathan Sélea <jonathan@selea.se>
 Package: lp-ddns
-Version: 0.3a
-Standard-Version: 0.3a
+Version: 0.5
+Standard-Version: 0.5
 Architecture: all
 Essential: no
 Depends-On: curl bash
 Homepage: https://linux.pizza
-Vcs-Git: https://git.selea.se/jonathan/lp-dyndns
+Vcs-Git: https://github.com/wioxjk/lp-ddns/
 Description: Tool for managing Dynamic DNS toghether with FreeDNS.linux.pizza
