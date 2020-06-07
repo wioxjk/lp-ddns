@@ -1,1 +1,1 @@
-*/30 * * * * /usr/local/bin/lp-ddns >/dev/null 2>&1
+*/30 * * * /usr/local/bin/lp-ddns >/dev/null 2>&1
