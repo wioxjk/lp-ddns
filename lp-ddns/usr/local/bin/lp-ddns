@@ -14,7 +14,12 @@ set -e
 
 IP="$(curl --connect-timeout 10 -s ipv4.is || curl --connect-timeout 10 -s ipv4.is)"
 #IP="$(curl --config /etc/lp-dyndns/curlrc)"
-CURRENTIP="$(dig ${DOMAIN} +short)"
+if [ "${NAMESERVER}" = "" ];
+then
+	CURRENTIP="$(dig ${DOMAIN} +short)"
+else
+	CURRENTIP="$(dig @${NAMESERVER} ${DOMAIN} +short)"
+fi
 APIURL="https://freedns.linux.pizza/api/v1/remote/updatepw?record=${RECORDID}&password=${PASSWORD}&content=${IP}"
 # Making stuff fancy
 NC='\033[0m' 
